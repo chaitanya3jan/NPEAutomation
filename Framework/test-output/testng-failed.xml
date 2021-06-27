@@ -3,16 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.aautomation.testcases.MainmenuScenarios2">
+      <class name="com.aautomation.testcases.DashboardQuick">
         <methods>
+          <include name="AddGiftforAppealFund"/>
           <include name="setUp"/>
           <include name="tearDownMethod"/>
           <include name="tearDown"/>
           <include name="loginProcess"/>
-          <include name="addIndividualFromMainmenu" invocation-numbers="0"/>
           <include name="setUpSuite"/>
         </methods>
-      </class> <!-- com.aautomation.testcases.MainmenuScenarios2 -->
+      </class> <!-- com.aautomation.testcases.DashboardQuick -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

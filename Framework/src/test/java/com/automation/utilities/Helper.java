@@ -71,7 +71,7 @@ public class Helper {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		
 	
-		//wait.until(ExpectedConditions.visibilityOf(element));
+		wait.until(ExpectedConditions.visibilityOf(element));
 		
 		//wait.until(ExpectedConditions.
 		
@@ -137,7 +137,7 @@ public class Helper {
 	
 	public static Object selectDropdown(WebElement element, String optiontoselect) {
 		
-		System.out.println("Welcome select drop down");
+		System.out.println(optiontoselect);
 		
 		Select dropdown = new Select(element);
 		
@@ -146,6 +146,26 @@ public class Helper {
 		return null;
 	}
 	
+	public static Object selectByOption(WebElement element, String optiontoselect) {
+		
+		System.out.println(optiontoselect);
+		
+		Select dropdown = new Select(element);
+		
+		dropdown.selectByValue(optiontoselect);
+		
+		return null;
+	}
+	public static Object selectByIndex(WebElement element, String optiontoselect) {
+		
+		System.out.println(optiontoselect);
+		
+		Select dropdown = new Select(element);
+		
+		dropdown.selectByIndex(7);
+		
+		return null;
+	}
 	
 		public static boolean isWebElementDisplayed(WebDriver driver,WebElement element, int iTimeOutInSec) {
 		
@@ -165,6 +185,8 @@ public class Helper {
 		return false;
 		}
 		}
+		
+		
 		
 	public static void datePicker(WebElement element, WebElement currentmonthyear, WebElement next, WebElement prev, WebElement daytoselect, String dob) {
 		

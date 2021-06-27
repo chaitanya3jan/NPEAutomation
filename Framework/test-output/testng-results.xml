@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="5" total="6" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41393" started-at="2021-06-21T13:05:17Z" finished-at="2021-06-21T13:05:58Z">
+  <suite name="Default suite" duration-ms="29611" started-at="2021-06-27T04:24:22Z" finished-at="2021-06-27T04:24:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="41393" started-at="2021-06-21T13:05:17Z" finished-at="2021-06-21T13:05:58Z">
-      <class name="com.aautomation.testcases.MainmenuScenarios">
-        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:com.aautomation.testcases.MainmenuScenarios@146ba0ac]" name="setUpSuite" is-config="true" duration-ms="1318" started-at="2021-06-21T13:05:15Z" finished-at="2021-06-21T13:05:17Z">
+    <test name="Default test" duration-ms="29611" started-at="2021-06-27T04:24:22Z" finished-at="2021-06-27T04:24:52Z">
+      <class name="com.aautomation.testcases.DashboardQuick">
+        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:com.aautomation.testcases.DashboardQuick@6eebc39e]" name="setUpSuite" is-config="true" duration-ms="961" started-at="2021-06-27T04:24:21Z" finished-at="2021-06-27T04:24:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpSuite -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.aautomation.testcases.MainmenuScenarios@146ba0ac]" name="setUp" is-config="true" duration-ms="20325" started-at="2021-06-21T13:05:17Z" finished-at="2021-06-21T13:05:37Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.aautomation.testcases.DashboardQuick@6eebc39e]" name="setUp" is-config="true" duration-ms="23313" started-at="2021-06-27T04:24:22Z" finished-at="2021-06-27T04:24:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginProcess()[pri:0, instance:com.aautomation.testcases.MainmenuScenarios@146ba0ac]" name="loginProcess" is-config="true" duration-ms="1" started-at="2021-06-21T13:05:37Z" finished-at="2021-06-21T13:05:37Z">
+        <test-method status="PASS" signature="AddGiftforAppealFund()[pri:0, instance:com.aautomation.testcases.DashboardQuick@6eebc39e]" name="AddGiftforAppealFund" duration-ms="5613" started-at="2021-06-27T04:24:45Z" finished-at="2021-06-27T04:24:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddGiftforAppealFund -->
+        <test-method status="PASS" signature="loginProcess()[pri:0, instance:com.aautomation.testcases.DashboardQuick@6eebc39e]" name="loginProcess" is-config="true" duration-ms="0" started-at="2021-06-27T04:24:45Z" finished-at="2021-06-27T04:24:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginProcess -->
-        <test-method status="PASS" signature="addIndividualFromMainmenu()[pri:0, instance:com.aautomation.testcases.MainmenuScenarios@146ba0ac]" name="addIndividualFromMainmenu" duration-ms="18082" started-at="2021-06-21T13:05:37Z" finished-at="2021-06-21T13:05:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addIndividualFromMainmenu -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.aautomation.testcases.MainmenuScenarios@146ba0ac]" name="tearDownMethod" is-config="true" duration-ms="1454" started-at="2021-06-21T13:05:55Z" finished-at="2021-06-21T13:05:56Z">
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.aautomation.testcases.DashboardQuick@6eebc39e]" name="tearDownMethod" is-config="true" duration-ms="662" started-at="2021-06-27T04:24:51Z" finished-at="2021-06-27T04:24:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addIndividualFromMainmenu status=SUCCESS method=MainmenuScenarios.addIndividualFromMainmenu()[pri:0, instance:com.aautomation.testcases.MainmenuScenarios@146ba0ac] output={null}]]]>
+                <![CDATA[[TestResult name=AddGiftforAppealFund status=SUCCESS method=DashboardQuick.AddGiftforAppealFund()[pri:0, instance:com.aautomation.testcases.DashboardQuick@6eebc39e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.aautomation.testcases.MainmenuScenarios@146ba0ac]" name="tearDown" is-config="true" duration-ms="1498" started-at="2021-06-21T13:05:56Z" finished-at="2021-06-21T13:05:58Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.aautomation.testcases.DashboardQuick@6eebc39e]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-06-27T04:24:52Z" finished-at="2021-06-27T04:24:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.aautomation.testcases.MainmenuScenarios -->
+      </class> <!-- com.aautomation.testcases.DashboardQuick -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -26,6 +26,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.MediaEntityModelProvider;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.paulhammant.ngwebdriver.NgWebDriver;
 
 public class Base {
 	
@@ -43,6 +44,7 @@ public class Base {
 		ExtentHtmlReporter extent = new ExtentHtmlReporter(new File("./Reports/TestReport"+Helper.getCurrentDateTime()+".html"));
 		report=new ExtentReports();
 		report.attachReporter(extent);
+		
 	}
 	
 	@BeforeClass
@@ -70,7 +72,7 @@ public class Base {
 	
 	@AfterClass
 	public void tearDown() {
-		BrowserFactory.quitBrowser(driver);
+		//BrowserFactory.quitBrowser(driver);
 	}
 	
 	@AfterMethod

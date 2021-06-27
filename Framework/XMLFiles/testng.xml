@@ -4,7 +4,8 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.aautomation.testcases.LoginTest"/>
-      <class name="com.aautomation.testcases.MainmenuScenarios2"/>
+      <class name="com.aautomation.testcases.MainmenuScenarios"/>
+      <class name="com.aautomation.testcases.DashboardQuick"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

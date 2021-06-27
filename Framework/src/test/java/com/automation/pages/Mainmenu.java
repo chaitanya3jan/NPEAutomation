@@ -101,8 +101,51 @@ public class Mainmenu {
 	WebElement logo;
 	@FindBy(xpath="//*[@id=\"spnContactViewLayout\"]/header/div[1]/div[2]/h1")
 	WebElement contactinfo;
-
-
+	
+	//Add Organization
+	@FindBy(xpath = "//*[@id=\"contactNav\"]/div/ul[1]/li[2]/a")
+	WebElement AddOrg;
+	@FindBy(xpath = "//*[@id=\"contactselector\"]")
+	WebElement NPcontact;
+	@FindBy(xpath = "//*[@id=\"”spnAddEditOrganization”\"]/form/div[1]/div[1]/div[1]/div/div/div[2]/span[2]/contactselector/div/ng-form/span/ul/li[1]/a/table/tbody/tr[1]/td/h5/span[2]")
+	WebElement NPcontactlist;
+	@FindBy(xpath = "//*[@id=\"organizationselector\"]")
+	WebElement Orgname;
+	@FindBy(xpath = "//*[@id=\"”spnAddEditOrganization”\"]/form/div[1]/div[1]/div[1]/div/div/div[4]/span[2]/input")
+	WebElement OrgEmployee;
+	@FindBy(xpath="//span/input[@name='Url']")
+	WebElement Orgwebsite;
+	@FindBy(xpath="//*[@id=\"”spnAddEditOrganization”\"]/form/div[1]/div[1]/div[1]/div/div/div[6]/span[2]/input")
+	WebElement Year;
+	@FindBy(xpath="//*[@id=\"”spnAddEditOrganization”\"]/form/div[1]/div[1]/div[1]/div/div/div[8]/span[2]/input")
+	WebElement Orgtaxid;
+	@FindBy(xpath="//*[@id=\"”spnAddEditOrganization”\"]/form/div[1]/div[1]/div[2]/div/div[2]/span[2]/input")
+	WebElement Jobtitle;
+	@FindBy(xpath="//*[@id=\"”spnAddEditOrganization”\"]/form/div[1]/div[1]/div[2]/div/div[3]/span[2]/input")
+	WebElement Contactfor;
+	@FindBy(xpath="//*[@id=\"”spnAddEditOrganization”\"]/form/div[1]/div[1]/div[2]/div[1]/div[4]/span[2]/salutation/div/span/input")
+	WebElement FormalSalutation;
+	@FindBy(xpath="//span/input[@name='AddressLine1']")
+	WebElement AddressLine1;
+	@FindBy(xpath="//*[@id='spinnerAddressundefined']/div[3]/fieldset/div/div/div[3]/span[2]/input")
+	WebElement AddressLine2;
+	@FindBy(xpath="//*[@id='spinnerAddressundefined']/div[3]/fieldset/div/div/div[6]/span[2]/div[1]/input")
+	WebElement Orgzip;
+	@FindBy(xpath="//*[@id='spinnerAddressundefined']/div[3]/fieldset/div/div/div[8]/span[2]/div/input")
+	WebElement Orgcity;
+	@FindBy(xpath="//input[@name='Email0']")
+	WebElement Orgemail;
+	@FindBy(xpath="//input[@name='Phone0']")
+	WebElement Orgphone;
+	@FindBy(xpath="//select[@name='PhoneSource']")
+	WebElement Orgphonestatus;
+	@FindBy(xpath="//select[@name='MailSource']")
+	WebElement Orgmailstatus;
+	@FindBy(xpath="//select[@name='EmailSource']")
+	WebElement Orgemailstatus;
+	@FindBy(xpath="//*[@id='spnAddEditOrganization']/form/div[2]/button[2]")
+	WebElement Save;
+	
 	public void addIndividualContact(String primaryNPContact, String prefix, String fname, String mname, String lname,
 			String suffix, String gender, String dob, String nick, String fsalutation, String contactsource,
 			String address1, String address2, String zipCode, String cityName, String stateName, String country, String addrCategory,
@@ -204,6 +247,44 @@ public class Mainmenu {
 			System.out.println("You are outside");
 
 
+		
+	}
+
+	public void addOrgContact(String primarynpecontact, String orgname, String numberofemployee, String website,
+			String yearfound, String taxid, String primarycontact, String jobtitle, String contactfor,
+			String formalsalutation, String addressline1, String addressline2, String zip,
+			String city, String email, String phone, String phonecommunication,
+			String mailcommunication, String emailcommunication, String crucialInfo) {
+		// TODO Auto-generated method stub
+		System.out.println("Create Add Organization from main menu");
+		menu.click();
+		System.out.println("Menu click");
+		contactmenu.click();
+		System.out.println("Contact menu click");
+		Helper.waitElement(driver, AddOrg).click();
+		//Helper.waitElement(driver, element)
+		NPcontact.sendKeys(primarycontact);
+		Helper.waitElement(driver, NPcontactlist).click();
+		Orgname.sendKeys(orgname);
+		OrgEmployee.sendKeys(numberofemployee);
+		Orgwebsite.sendKeys(website);
+		Year.sendKeys(yearfound);
+		Orgtaxid.sendKeys(taxid);
+		Jobtitle.sendKeys(jobtitle);
+		Contactfor.sendKeys(contactfor);
+		FormalSalutation.sendKeys(formalsalutation);
+		AddressLine1.sendKeys(addressline1);
+		AddressLine2.sendKeys(addressline2);
+		Orgzip.sendKeys(zip);
+		Orgcity.sendKeys(city);
+		Orgemail.sendKeys(email);
+		Orgphone.click();
+		Orgphone.sendKeys(phone);
+		Helper.selectDropdown(Orgphonestatus, phonecommunication);
+		Helper.selectDropdown(Orgemailstatus, emailcommunication);
+		Helper.selectDropdown(Orgmailstatus, mailcommunication);
+		
+		Save.click();
 		
 	}
 

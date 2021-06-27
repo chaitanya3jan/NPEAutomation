@@ -14,7 +14,7 @@ public class MainmenuScenarios extends Base {
 	
 	
 
-	@Test
+	@Test(enabled=false)
 	public void addIndividualFromMainmenu() {
 
 		logger = report.createTest("Mainmenu");
@@ -49,6 +49,38 @@ public class MainmenuScenarios extends Base {
 				);
 				
 				mainmenu.duplicateCheck();
+
+	}
+	@Test
+	public void addOrgFromMainmenu() {
+
+		logger = report.createTest("MainmenuAddOrg");
+
+		Mainmenu mainmenu = PageFactory.initElements(driver, Mainmenu.class);
+
+		mainmenu.addOrgContact(excel.getStringData("OrganizationFullDetails", 1, 0),
+				excel.getStringData("OrganizationFullDetails", 1, 1),
+				excel.getNumericDatatoString("OrganizationFullDetails", 1, 2),
+				excel.getStringData("OrganizationFullDetails", 1, 3),
+				excel.getNumericDatatoString("OrganizationFullDetails", 1, 4),
+				excel.getNumericDatatoString("OrganizationFullDetails", 1, 5),
+				excel.getStringData("OrganizationFullDetails", 1, 6),
+				excel.getStringData("OrganizationFullDetails", 1, 7),
+				excel.getStringData("OrganizationFullDetails", 1, 8),
+				excel.getStringData("OrganizationFullDetails", 1, 9),
+				excel.getStringData("OrganizationFullDetails", 1, 10),
+				excel.getStringData("OrganizationFullDetails", 1, 11),
+				excel.getNumericDatatoString("OrganizationFullDetails", 1, 12),
+				excel.getNumericDatatoString("OrganizationFullDetails", 1, 13),
+				excel.getStringData("OrganizationFullDetails", 1, 14),
+				excel.getNumericDatatoString("OrganizationFullDetails", 1, 15),
+				excel.getStringData("OrganizationFullDetails", 1, 16),
+				excel.getStringData("OrganizationFullDetails", 1, 17),
+				excel.getStringData("OrganizationFullDetails", 1, 18),
+				excel.getStringData("OrganizationFullDetails", 1, 19)
+				);
+				
+				//mainmenu.duplicateCheck();
 
 	}
 
